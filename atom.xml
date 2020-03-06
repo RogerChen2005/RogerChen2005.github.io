@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://RogerChen2005.github.io</id>
     <title>RogerChen233</title>
-    <updated>2020-03-06T23:33:01.915Z</updated>
+    <updated>2020-03-06T23:54:02.888Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://RogerChen2005.github.io"/>
     <link rel="self" href="https://RogerChen2005.github.io/atom.xml"/>
@@ -19,12 +19,20 @@
         <content type="html"><![CDATA[<blockquote>
 <p>欢迎</p>
 </blockquote>
-<p>##前言<br>
-这是我写的第一篇文章。<br>
+<h2 id="前言">前言</h2>
+<p>这是我写的第一篇文章。<br>
 接下来我可能会不定期更新一些有趣的东西。<br>
-可能是一些资源，<br>
-也可能只是我所拍的一张照片……<br>
-总之，<br>
+比如文章，音乐，链接，以及图片。</p>
+<h2 id="文章">文章</h2>
+<p>自己写的或者从某些网站搜集来的文章。</p>
+<h2 id="音乐">音乐</h2>
+<p>分享各种电子音乐，一般以链接形式。</p>
+<h2 id="链接">链接</h2>
+<p>包括一些实用的软件和各种软件的注册机。</p>
+<h2 id="图片">图片</h2>
+<p>自己拍的或者从某些网站搜集来的图片。</p>
+<h2 id="总结">总结</h2>
+<p>总之，<br>
 欢迎来到我的网站！<br>
 RogerChen233<br>
 2020年3月6日</p>
