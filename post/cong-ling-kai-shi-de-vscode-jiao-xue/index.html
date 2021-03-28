@@ -162,7 +162,7 @@
                     <article class="post-wrap">
                         <header class="post-header">
                             <h1 class="post-title">
-                                Check Out My New Video
+                                从零开始的VSCode教学
                             </h1>
                             
                                     <!--zh-->
@@ -171,11 +171,11 @@
                                         <a itemprop="author" rel="author" href="/">
                                             RogerChen233
                                         </a>
-                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2021-02-13 14:02:00</a></span>
+                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2021-03-28 10:03:00</a></span>
                                         <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a
-                                    href="#">0.0
+                                    href="#">3.2
                                     &#x5206;&#x949F;</a></span>
-                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">7</a></span>
+                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">848</a></span>
                                         
                                                 阅读量:
                                                 <span data-hk-page="current"> - </span>
@@ -184,12 +184,107 @@
                                     
                         </header>
                         <div class="post-content">
-                            <p>感谢占宝和喻宝</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/vTpYgYnRv9g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <p>本蒟蒻最近从Dev-C++切换到了VSCode,发现VSCode是真的好用，感触甚深，是故发此文记之。</p>
+<h1>!!!!!!多图警告</h1>
+<br/>
+<h1 id="1-下载与安装">1、下载与安装</h1>
+<h3>下载地址：<a href = "https://code.visualstudio.com/">https://code.visualstudio.com/</a></h3>
+## ↓红圈圈起来的点一下就是（<s>真就傻瓜式教学😅</s>）
+![](https://RogerChen2005.github.io/post-images/1616897887704.png)
+## 下载完成后，我们得到了这样一个文件↓
+![](https://RogerChen2005.github.io/post-images/1616898184474.png)
+ ## <s>没错，这就是VSCode的安装包！！！😁</s>
+ ## 按照默认的来选就好了，不用乱改。
+ ![](https://RogerChen2005.github.io/post-images/1616898239074.png)
+ ## 这就是VScode的界面↓
+ ![](https://RogerChen2005.github.io/post-images/1616898393018.png)
+ ## 这是有人就要问了：“诶，你说这界面怎么是英文的？🤔”
+ ## 别急，VSCode有自带的插件商店，里面就有中文的插件。
+ ![](https://RogerChen2005.github.io/post-images/1616898499394.jpg)
+ ## 安装重启之后，界面就变成中文了↓
+ ![](https://RogerChen2005.github.io/post-images/1616898565577.png)
+ ## 要想搭建一个舒适的Coding环境，没有插件是不行滴，所以，我们再次打开插件商店，搜索C++,第一个就是↓
+ ![](https://RogerChen2005.github.io/post-images/1616904911908.png)
+##  如果嫌一个一个装麻烦，Microsoft还贴心地为各位提供了一次性安装完的整合包。
+ ![](https://RogerChen2005.github.io/post-images/1616904976661.png)
+ ## 对了，记得勾上自动保存，不然老是Ctrl + s保存很烦↓
+ ![](https://RogerChen2005.github.io/post-images/1616910338169.png)
+<h1 id="2-编译器环境配置">2、编译器环境配置</h1>
+<h2 id="首先我们要先新建一个文件夹名字取什么都行我就直接叫code了">首先，我们要先新建一个文件夹，名字取什么都行，我就直接叫Code了。</h2>
+<figure data-type="image" tabindex="1"><img src="https://RogerChen2005.github.io/post-images/1616905299840.png" alt="" loading="lazy"></figure>
+<h2 id="我们在vscode中打开这个文件夹正常情况下下面的那条会变成蓝色">我们在VScode中打开这个文件夹，正常情况下下面的那条会变成蓝色。</h2>
+<figure data-type="image" tabindex="2"><img src="https://RogerChen2005.github.io/post-images/1616905380520.jpg" alt="" loading="lazy"></figure>
+<h2 id="资源管理器里也会出现我们刚刚打开的文件夹我们新建一个文件后缀名是cpp这样vscode就会知道我们要写的是c了">资源管理器里也会出现我们刚刚打开的文件夹，我们新建一个文件，后缀名是*cpp这样VSCode就会知道我们要写的是C++了。</h2>
+<figure data-type="image" tabindex="3"><img src="https://RogerChen2005.github.io/post-images/1616906514796.png" alt="" loading="lazy"></figure>
+<h2 id="如果没有识别的话s一般不会s那可以按下图操作">如果没有识别的话（<s>一般不会</s>）那可以按下图操作。</h2>
+<figure data-type="image" tabindex="4"><img src="https://RogerChen2005.github.io/post-images/1616906679341.jpg" alt="" loading="lazy"></figure>
+<h2 id="众所周知svscode只是一个代码编辑器s所以我们需要自己安装编译器这里推荐两个">众所周知，<s>VSCode只是一个代码编辑器</s>，所以我们需要自己安装编译器，这里推荐两个：</h2>
+<h2 id="mingw-w64-a-href-httpwwwmingw-w64orgdokuphphttpwwwmingw-w64orgdokuphpa">MinGW-w64: <a href = "http://www.mingw-w64.org/doku.php">http://www.mingw-w64.org/doku.php</a></h2>
+<h2 id="tdm-gcc-a-href-httpsjmeubankgithubiotdm-gcchttpsjmeubankgithubiotdm-gcca">TDM-GCC: <a href = "https://jmeubank.github.io/tdm-gcc/">https://jmeubank.github.io/tdm-gcc/</a></h2>
+<h2 id="要我说吧其实没多大区别最多就是编译完的exe的大小">要我说吧，其实没多大区别，最多就是编译完的exe的大小:</h2>
+<figure data-type="image" tabindex="5"><img src="https://RogerChen2005.github.io/post-images/1616908269937.png" alt="" loading="lazy"></figure>
+<h2 id="如果你得到的只是一个文件夹那你还需要进行以下操作">如果你得到的只是一个文件夹，那你还需要进行以下操作：</h2>
+<h2 id="先确认编译器的位置我这里是mingw-w64位于c盘的根目录下">先确认编译器的位置，我这里是MinGW-w64，位于C盘的根目录下↓</h2>
+<figure data-type="image" tabindex="6"><img src="https://RogerChen2005.github.io/post-images/1616908396802.png" alt="" loading="lazy"></figure>
+<h2 id="-右键此电脑点击属性">-&gt;右键此电脑，点击属性</h2>
+<figure data-type="image" tabindex="7"><img src="https://RogerChen2005.github.io/post-images/1616908479549.png" alt="" loading="lazy"></figure>
+<h2 id="-选择高级系统设置">-&gt;选择“高级系统设置”</h2>
+<figure data-type="image" tabindex="8"><img src="https://RogerChen2005.github.io/post-images/1616908505830.png" alt="" loading="lazy"></figure>
+<h2 id="-编辑系统变量注意是系统里的path不要编辑用户里的path选择编译器文件夹中的bin文件夹">-&gt;编辑系统变量，注意是系统里的Path，不要编辑用户里的Path,选择编译器文件夹中的bin文件夹</h2>
+<figure data-type="image" tabindex="9"><img src="https://RogerChen2005.github.io/post-images/1616908710288.jpg" alt="" loading="lazy"></figure>
+<h2 id="-重启vscode在代码编辑窗口右键选择生成和调试活动文件在弹出的窗口中此时应该可见刚刚安装的编译器了-f5也可以">-&gt;重启VSCode，在代码编辑窗口右键选择“生成和调试活动文件”，在弹出的窗口中此时应该可见刚刚安装的编译器了。（F5也可以）</h2>
+<h2 id="解释g是编译c的gcc是用来编译c的gdb是用来调试的">解释：g++是编译C++的，gcc是用来编译C的，gdb是用来调试的。</h2>
+<figure data-type="image" tabindex="10"><img src="https://RogerChen2005.github.io/post-images/1616908966039.png" alt="" loading="lazy"></figure>
+<h2 id="运行结果在下面的终端里面可以直接把它当成cmd来用">运行结果在下面的终端里面（可以直接把它当成CMD来用）。</h2>
+<figure data-type="image" tabindex="11"><img src="https://RogerChen2005.github.io/post-images/1616909066161.png" alt="" loading="lazy"></figure>
+<h2 id="要调试时选中一行按f9就会新增一个断点再按f5就好了限于篇幅以后细">要调试时，选中一行按F9就会新增一个断点，再按F5就好了（限于篇幅，以后细🔒）</h2>
+<figure data-type="image" tabindex="12"><img src="https://RogerChen2005.github.io/post-images/1616910631285.png" alt="" loading="lazy"></figure>
+<h1 id="3-界面优化">3、界面优化</h1>
+<h2 id="界面缩放比不适应怎么办快捷键ctrl-是放大ctrl-是缩小">界面缩放比不适应怎么办？快捷键Ctrl + &quot;+&quot;是放大，Ctrl + “-”是缩小。</h2>
+<h2 id="放大后界面">放大后界面↓</h2>
+<figure data-type="image" tabindex="13"><img src="https://RogerChen2005.github.io/post-images/1616909195770.png" alt="" loading="lazy"></figure>
+<h2 id="编辑器的字体则需要去设置里面调">编辑器的字体则需要去设置里面调↓</h2>
+<figure data-type="image" tabindex="14"><img src="https://RogerChen2005.github.io/post-images/1616909262679.png" alt="" loading="lazy"></figure>
+<h2 id="喜欢浅色建议去拓展商店里面下一个atom-one-light-theme个人觉得比vscode自带的浅色主题好看">喜欢浅色建议去拓展商店里面下一个Atom One Light Theme个人觉得比VSCode自带的浅色主题好看。</h2>
+<figure data-type="image" tabindex="15"><img src="https://RogerChen2005.github.io/post-images/1616910138954.png" alt="" loading="lazy"></figure>
+<p>END</p>
+
                         </div>
                         
                             <div class="post-toc">
-                                
+                                <ul class="markdownIt-TOC">
+<li><a href="#1-%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85">1、下载与安装</a></li>
+<li><a href="#2-%E7%BC%96%E8%AF%91%E5%99%A8%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE">2、编译器环境配置</a>
+<ul>
+<li><a href="#%E9%A6%96%E5%85%88%E6%88%91%E4%BB%AC%E8%A6%81%E5%85%88%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9%E5%90%8D%E5%AD%97%E5%8F%96%E4%BB%80%E4%B9%88%E9%83%BD%E8%A1%8C%E6%88%91%E5%B0%B1%E7%9B%B4%E6%8E%A5%E5%8F%ABcode%E4%BA%86">首先，我们要先新建一个文件夹，名字取什么都行，我就直接叫Code了。</a></li>
+<li><a href="#%E6%88%91%E4%BB%AC%E5%9C%A8vscode%E4%B8%AD%E6%89%93%E5%BC%80%E8%BF%99%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9%E6%AD%A3%E5%B8%B8%E6%83%85%E5%86%B5%E4%B8%8B%E4%B8%8B%E9%9D%A2%E7%9A%84%E9%82%A3%E6%9D%A1%E4%BC%9A%E5%8F%98%E6%88%90%E8%93%9D%E8%89%B2">我们在VScode中打开这个文件夹，正常情况下下面的那条会变成蓝色。</a></li>
+<li><a href="#%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8%E9%87%8C%E4%B9%9F%E4%BC%9A%E5%87%BA%E7%8E%B0%E6%88%91%E4%BB%AC%E5%88%9A%E5%88%9A%E6%89%93%E5%BC%80%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9%E6%88%91%E4%BB%AC%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E5%90%8E%E7%BC%80%E5%90%8D%E6%98%AFcpp%E8%BF%99%E6%A0%B7vscode%E5%B0%B1%E4%BC%9A%E7%9F%A5%E9%81%93%E6%88%91%E4%BB%AC%E8%A6%81%E5%86%99%E7%9A%84%E6%98%AFc%E4%BA%86">资源管理器里也会出现我们刚刚打开的文件夹，我们新建一个文件，后缀名是*cpp这样VSCode就会知道我们要写的是C++了。</a></li>
+<li><a href="#%E5%A6%82%E6%9E%9C%E6%B2%A1%E6%9C%89%E8%AF%86%E5%88%AB%E7%9A%84%E8%AF%9Ds%E4%B8%80%E8%88%AC%E4%B8%8D%E4%BC%9As%E9%82%A3%E5%8F%AF%E4%BB%A5%E6%8C%89%E4%B8%8B%E5%9B%BE%E6%93%8D%E4%BD%9C">如果没有识别的话（<s>一般不会</s>）那可以按下图操作。</a></li>
+<li><a href="#%E4%BC%97%E6%89%80%E5%91%A8%E7%9F%A5svscode%E5%8F%AA%E6%98%AF%E4%B8%80%E4%B8%AA%E4%BB%A3%E7%A0%81%E7%BC%96%E8%BE%91%E5%99%A8s%E6%89%80%E4%BB%A5%E6%88%91%E4%BB%AC%E9%9C%80%E8%A6%81%E8%87%AA%E5%B7%B1%E5%AE%89%E8%A3%85%E7%BC%96%E8%AF%91%E5%99%A8%E8%BF%99%E9%87%8C%E6%8E%A8%E8%8D%90%E4%B8%A4%E4%B8%AA">众所周知，<s>VSCode只是一个代码编辑器</s>，所以我们需要自己安装编译器，这里推荐两个：</a></li>
+<li><a href="#mingw-w64-a-href-httpwwwmingw-w64orgdokuphphttpwwwmingw-w64orgdokuphpa">MinGW-w64: <a href = "http://www.mingw-w64.org/doku.php">http://www.mingw-w64.org/doku.php</a></a></li>
+<li><a href="#tdm-gcc-a-href-httpsjmeubankgithubiotdm-gcchttpsjmeubankgithubiotdm-gcca">TDM-GCC: <a href = "https://jmeubank.github.io/tdm-gcc/">https://jmeubank.github.io/tdm-gcc/</a></a></li>
+<li><a href="#%E8%A6%81%E6%88%91%E8%AF%B4%E5%90%A7%E5%85%B6%E5%AE%9E%E6%B2%A1%E5%A4%9A%E5%A4%A7%E5%8C%BA%E5%88%AB%E6%9C%80%E5%A4%9A%E5%B0%B1%E6%98%AF%E7%BC%96%E8%AF%91%E5%AE%8C%E7%9A%84exe%E7%9A%84%E5%A4%A7%E5%B0%8F">要我说吧，其实没多大区别，最多就是编译完的exe的大小:</a></li>
+<li><a href="#%E5%A6%82%E6%9E%9C%E4%BD%A0%E5%BE%97%E5%88%B0%E7%9A%84%E5%8F%AA%E6%98%AF%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9%E9%82%A3%E4%BD%A0%E8%BF%98%E9%9C%80%E8%A6%81%E8%BF%9B%E8%A1%8C%E4%BB%A5%E4%B8%8B%E6%93%8D%E4%BD%9C">如果你得到的只是一个文件夹，那你还需要进行以下操作：</a></li>
+<li><a href="#%E5%85%88%E7%A1%AE%E8%AE%A4%E7%BC%96%E8%AF%91%E5%99%A8%E7%9A%84%E4%BD%8D%E7%BD%AE%E6%88%91%E8%BF%99%E9%87%8C%E6%98%AFmingw-w64%E4%BD%8D%E4%BA%8Ec%E7%9B%98%E7%9A%84%E6%A0%B9%E7%9B%AE%E5%BD%95%E4%B8%8B">先确认编译器的位置，我这里是MinGW-w64，位于C盘的根目录下↓</a></li>
+<li><a href="#-%E5%8F%B3%E9%94%AE%E6%AD%A4%E7%94%B5%E8%84%91%E7%82%B9%E5%87%BB%E5%B1%9E%E6%80%A7">-&gt;右键此电脑，点击属性</a></li>
+<li><a href="#-%E9%80%89%E6%8B%A9%E9%AB%98%E7%BA%A7%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE">-&gt;选择“高级系统设置”</a></li>
+<li><a href="#-%E7%BC%96%E8%BE%91%E7%B3%BB%E7%BB%9F%E5%8F%98%E9%87%8F%E6%B3%A8%E6%84%8F%E6%98%AF%E7%B3%BB%E7%BB%9F%E9%87%8C%E7%9A%84path%E4%B8%8D%E8%A6%81%E7%BC%96%E8%BE%91%E7%94%A8%E6%88%B7%E9%87%8C%E7%9A%84path%E9%80%89%E6%8B%A9%E7%BC%96%E8%AF%91%E5%99%A8%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%AD%E7%9A%84bin%E6%96%87%E4%BB%B6%E5%A4%B9">-&gt;编辑系统变量，注意是系统里的Path，不要编辑用户里的Path,选择编译器文件夹中的bin文件夹</a></li>
+<li><a href="#-%E9%87%8D%E5%90%AFvscode%E5%9C%A8%E4%BB%A3%E7%A0%81%E7%BC%96%E8%BE%91%E7%AA%97%E5%8F%A3%E5%8F%B3%E9%94%AE%E9%80%89%E6%8B%A9%E7%94%9F%E6%88%90%E5%92%8C%E8%B0%83%E8%AF%95%E6%B4%BB%E5%8A%A8%E6%96%87%E4%BB%B6%E5%9C%A8%E5%BC%B9%E5%87%BA%E7%9A%84%E7%AA%97%E5%8F%A3%E4%B8%AD%E6%AD%A4%E6%97%B6%E5%BA%94%E8%AF%A5%E5%8F%AF%E8%A7%81%E5%88%9A%E5%88%9A%E5%AE%89%E8%A3%85%E7%9A%84%E7%BC%96%E8%AF%91%E5%99%A8%E4%BA%86-f5%E4%B9%9F%E5%8F%AF%E4%BB%A5">-&gt;重启VSCode，在代码编辑窗口右键选择“生成和调试活动文件”，在弹出的窗口中此时应该可见刚刚安装的编译器了。（F5也可以）</a></li>
+<li><a href="#%E8%A7%A3%E9%87%8Ag%E6%98%AF%E7%BC%96%E8%AF%91c%E7%9A%84gcc%E6%98%AF%E7%94%A8%E6%9D%A5%E7%BC%96%E8%AF%91c%E7%9A%84gdb%E6%98%AF%E7%94%A8%E6%9D%A5%E8%B0%83%E8%AF%95%E7%9A%84">解释：g++是编译C++的，gcc是用来编译C的，gdb是用来调试的。</a></li>
+<li><a href="#%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C%E5%9C%A8%E4%B8%8B%E9%9D%A2%E7%9A%84%E7%BB%88%E7%AB%AF%E9%87%8C%E9%9D%A2%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E6%8A%8A%E5%AE%83%E5%BD%93%E6%88%90cmd%E6%9D%A5%E7%94%A8">运行结果在下面的终端里面（可以直接把它当成CMD来用）。</a></li>
+<li><a href="#%E8%A6%81%E8%B0%83%E8%AF%95%E6%97%B6%E9%80%89%E4%B8%AD%E4%B8%80%E8%A1%8C%E6%8C%89f9%E5%B0%B1%E4%BC%9A%E6%96%B0%E5%A2%9E%E4%B8%80%E4%B8%AA%E6%96%AD%E7%82%B9%E5%86%8D%E6%8C%89f5%E5%B0%B1%E5%A5%BD%E4%BA%86%E9%99%90%E4%BA%8E%E7%AF%87%E5%B9%85%E4%BB%A5%E5%90%8E%E7%BB%86">要调试时，选中一行按F9就会新增一个断点，再按F5就好了（限于篇幅，以后细🔒）</a></li>
+</ul>
+</li>
+<li><a href="#3-%E7%95%8C%E9%9D%A2%E4%BC%98%E5%8C%96">3、界面优化</a>
+<ul>
+<li><a href="#%E7%95%8C%E9%9D%A2%E7%BC%A9%E6%94%BE%E6%AF%94%E4%B8%8D%E9%80%82%E5%BA%94%E6%80%8E%E4%B9%88%E5%8A%9E%E5%BF%AB%E6%8D%B7%E9%94%AEctrl-%E6%98%AF%E6%94%BE%E5%A4%A7ctrl-%E6%98%AF%E7%BC%A9%E5%B0%8F">界面缩放比不适应怎么办？快捷键Ctrl + &quot;+&quot;是放大，Ctrl + “-”是缩小。</a></li>
+<li><a href="#%E6%94%BE%E5%A4%A7%E5%90%8E%E7%95%8C%E9%9D%A2">放大后界面↓</a></li>
+<li><a href="#%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E5%AD%97%E4%BD%93%E5%88%99%E9%9C%80%E8%A6%81%E5%8E%BB%E8%AE%BE%E7%BD%AE%E9%87%8C%E9%9D%A2%E8%B0%83">编辑器的字体则需要去设置里面调↓</a></li>
+<li><a href="#%E5%96%9C%E6%AC%A2%E6%B5%85%E8%89%B2%E5%BB%BA%E8%AE%AE%E5%8E%BB%E6%8B%93%E5%B1%95%E5%95%86%E5%BA%97%E9%87%8C%E9%9D%A2%E4%B8%8B%E4%B8%80%E4%B8%AAatom-one-light-theme%E4%B8%AA%E4%BA%BA%E8%A7%89%E5%BE%97%E6%AF%94vscode%E8%87%AA%E5%B8%A6%E7%9A%84%E6%B5%85%E8%89%B2%E4%B8%BB%E9%A2%98%E5%A5%BD%E7%9C%8B">喜欢浅色建议去拓展商店里面下一个Atom One Light Theme个人觉得比VSCode自带的浅色主题好看。</a></li>
+</ul>
+</li>
+</ul>
+
                             </div>
                             
                                 
@@ -203,7 +298,7 @@
 
                                                 <p class="copyright-item">
                                                     <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
-                                                    <span><a href="https://RogerChen2005.github.io/post/check-out-my-new-video/">https://RogerChen2005.github.io/post/check-out-my-new-video/</a></span>
+                                                    <span><a href="https://RogerChen2005.github.io/post/cong-ling-kai-shi-de-vscode-jiao-xue/">https://RogerChen2005.github.io/post/cong-ling-kai-shi-de-vscode-jiao-xue/</a></span>
                                                 </p>
 
                                                 <p class="copyright-item">
@@ -218,9 +313,9 @@
                                                                     <span style="margin-right:15px">
                         <i class="post-share"></i>
                         <span>&#x5206;&#x4EAB;:</span>
-                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://RogerChen2005.github.io/post/check-out-my-new-video/"><i class="fa fa-qrcode"></i></a>
-                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://RogerChen2005.github.io/post/check-out-my-new-video/&sharesource=qzone&title=Check Out My New Video&pics=https://RogerChen2005.github.io/images/avatar.png?v=1616910782419&summary="><i class="fa fa-qq"></i></a>
-                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://RogerChen2005.github.io/post/check-out-my-new-video/&sharesource=weibo&title=Check Out My New Video + " - " + &pic="https://RogerChen2005.github.io/images/avatar.png?v=1616910782419 "><i class="fa fa-weibo "></i></a>
+                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://RogerChen2005.github.io/post/cong-ling-kai-shi-de-vscode-jiao-xue/"><i class="fa fa-qrcode"></i></a>
+                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://RogerChen2005.github.io/post/cong-ling-kai-shi-de-vscode-jiao-xue/&sharesource=qzone&title=从零开始的VSCode教学&pics=https://RogerChen2005.github.io/images/avatar.png?v=1616910782419&summary="><i class="fa fa-qq"></i></a>
+                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://RogerChen2005.github.io/post/cong-ling-kai-shi-de-vscode-jiao-xue/&sharesource=weibo&title=从零开始的VSCode教学 + " - " + &pic="https://RogerChen2005.github.io/images/avatar.png?v=1616910782419 "><i class="fa fa-weibo "></i></a>
 
                                                                     </span>
                                                                     
@@ -244,13 +339,9 @@
                                                                                 <!---->
                                                                                 <section class="post-nav">
                                                                                     
-                                                                                        <a class="prev" rel="prev" href="https://RogerChen2005.github.io/post/cong-ling-kai-shi-de-vscode-jiao-xue/">
-                                                                                            从零开始的VSCode教学
-                                                                                        </a>
-                                                                                        
                                                                                             
-                                                                                                <a class="next" rel="next" href="https://RogerChen2005.github.io/post/lesslesscai-hong-liu-hao-wei-gong-greatergreater-ping-ce/">
-                                                                                                    《彩虹六号：围攻》评测
+                                                                                                <a class="next" rel="next" href="https://RogerChen2005.github.io/post/check-out-my-new-video/">
+                                                                                                    Check Out My New Video
                                                                                                 </a>
                                                                                                 
                                                                                 </section>
