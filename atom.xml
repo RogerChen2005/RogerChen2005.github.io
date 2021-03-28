@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://RogerChen2005.github.io</id>
     <title>RogerChen233</title>
-    <updated>2021-03-28T05:53:04.977Z</updated>
+    <updated>2021-03-28T05:58:49.029Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://RogerChen2005.github.io"/>
     <link rel="self" href="https://RogerChen2005.github.io/atom.xml"/>
@@ -20,65 +20,65 @@
 <h1>!!!!!!多图警告</h1>
 <br/>
 <h1 id="1-下载与安装">1、下载与安装</h1>
-<h3>下载地址：<a href = "https://code.visualstudio.com/">https://code.visualstudio.com/</a></h3>
-## ↓红圈圈起来的点一下就是（<s>真就傻瓜式教学😅</s>）
-![](https://RogerChen2005.github.io/post-images/1616897887704.png)
-## 下载完成后，我们得到了这样一个文件↓
-![](https://RogerChen2005.github.io/post-images/1616898184474.png)
- ## <s>没错，这就是VSCode的安装包！！！😁</s>
- ## 按照默认的来选就好了，不用乱改。
- ![](https://RogerChen2005.github.io/post-images/1616898239074.png)
- ## 这就是VScode的界面↓
- ![](https://RogerChen2005.github.io/post-images/1616898393018.png)
- ## 这是有人就要问了：“诶，你说这界面怎么是英文的？🤔”
- ## 别急，VSCode有自带的插件商店，里面就有中文的插件。
- ![](https://RogerChen2005.github.io/post-images/1616898499394.jpg)
- ## 安装重启之后，界面就变成中文了↓
- ![](https://RogerChen2005.github.io/post-images/1616898565577.png)
- ## 要想搭建一个舒适的Coding环境，没有插件是不行滴，所以，我们再次打开插件商店，搜索C++,第一个就是↓
- ![](https://RogerChen2005.github.io/post-images/1616904911908.png)
-##  如果嫌一个一个装麻烦，Microsoft还贴心地为各位提供了一次性安装完的整合包。
- ![](https://RogerChen2005.github.io/post-images/1616904976661.png)
- ## 对了，记得勾上自动保存，不然老是Ctrl + s保存很烦↓
- ![](https://RogerChen2005.github.io/post-images/1616910338169.png)
+<p>下载地址：<a href = "https://code.visualstudio.com/">https://code.visualstudio.com/</a><br>
+↓红圈圈起来的点一下就是（<s>真就傻瓜式教学😅</s>）<br>
+<img src="https://RogerChen2005.github.io/post-images/1616897887704.png" alt="" loading="lazy"><br>
+下载完成后，我们得到了这样一个文件↓<br>
+<img src="https://RogerChen2005.github.io/post-images/1616898184474.png" alt="" loading="lazy"><br>
+<s>没错，这就是VSCode的安装包！！！😁</s><br>
+按照默认的来选就好了，不用乱改。<br>
+<img src="https://RogerChen2005.github.io/post-images/1616898239074.png" alt="" loading="lazy"><br>
+这就是VScode的界面↓<br>
+<img src="https://RogerChen2005.github.io/post-images/1616898393018.png" alt="" loading="lazy"><br>
+这是有人就要问了：“诶，你说这界面怎么是英文的？🤔”<br>
+别急，VSCode有自带的插件商店，里面就有中文的插件。<br>
+<img src="https://RogerChen2005.github.io/post-images/1616898499394.jpg" alt="" loading="lazy"><br>
+安装重启之后，界面就变成中文了↓<br>
+<img src="https://RogerChen2005.github.io/post-images/1616898565577.png" alt="" loading="lazy"><br>
+要想搭建一个舒适的Coding环境，没有插件是不行滴，所以，我们再次打开插件商店，搜索C++,第一个就是↓<br>
+<img src="https://RogerChen2005.github.io/post-images/1616904911908.png" alt="" loading="lazy"><br>
+如果嫌一个一个装麻烦，Microsoft还贴心地为各位提供了一次性安装完的整合包。<br>
+<img src="https://RogerChen2005.github.io/post-images/1616904976661.png" alt="" loading="lazy"><br>
+对了，记得勾上自动保存，不然老是Ctrl + s保存很烦↓<br>
+<img src="https://RogerChen2005.github.io/post-images/1616910338169.png" alt="" loading="lazy"></p>
 <h1 id="2-编译器环境配置">2、编译器环境配置</h1>
-<h2 id="首先我们要先新建一个文件夹名字取什么都行我就直接叫code了">首先，我们要先新建一个文件夹，名字取什么都行，我就直接叫Code了。</h2>
-<figure data-type="image" tabindex="1"><img src="https://RogerChen2005.github.io/post-images/1616905299840.png" alt="" loading="lazy"></figure>
-<h2 id="我们在vscode中打开这个文件夹正常情况下下面的那条会变成蓝色">我们在VScode中打开这个文件夹，正常情况下下面的那条会变成蓝色。</h2>
-<figure data-type="image" tabindex="2"><img src="https://RogerChen2005.github.io/post-images/1616905380520.jpg" alt="" loading="lazy"></figure>
-<h2 id="资源管理器里也会出现我们刚刚打开的文件夹我们新建一个文件后缀名是cpp这样vscode就会知道我们要写的是c了">资源管理器里也会出现我们刚刚打开的文件夹，我们新建一个文件，后缀名是*cpp这样VSCode就会知道我们要写的是C++了。</h2>
-<figure data-type="image" tabindex="3"><img src="https://RogerChen2005.github.io/post-images/1616906514796.png" alt="" loading="lazy"></figure>
-<h2 id="如果没有识别的话s一般不会s那可以按下图操作">如果没有识别的话（<s>一般不会</s>）那可以按下图操作。</h2>
-<figure data-type="image" tabindex="4"><img src="https://RogerChen2005.github.io/post-images/1616906679341.jpg" alt="" loading="lazy"></figure>
-<h2 id="众所周知svscode只是一个代码编辑器s所以我们需要自己安装编译器这里推荐两个">众所周知，<s>VSCode只是一个代码编辑器</s>，所以我们需要自己安装编译器，这里推荐两个：</h2>
-<h2 id="mingw-w64-a-href-httpwwwmingw-w64orgdokuphphttpwwwmingw-w64orgdokuphpa">MinGW-w64: <a href = "http://www.mingw-w64.org/doku.php">http://www.mingw-w64.org/doku.php</a></h2>
-<h2 id="tdm-gcc-a-href-httpsjmeubankgithubiotdm-gcchttpsjmeubankgithubiotdm-gcca">TDM-GCC: <a href = "https://jmeubank.github.io/tdm-gcc/">https://jmeubank.github.io/tdm-gcc/</a></h2>
-<h2 id="要我说吧其实没多大区别最多就是编译完的exe的大小">要我说吧，其实没多大区别，最多就是编译完的exe的大小:</h2>
-<figure data-type="image" tabindex="5"><img src="https://RogerChen2005.github.io/post-images/1616908269937.png" alt="" loading="lazy"></figure>
-<h2 id="如果你得到的只是一个文件夹那你还需要进行以下操作">如果你得到的只是一个文件夹，那你还需要进行以下操作：</h2>
-<h2 id="先确认编译器的位置我这里是mingw-w64位于c盘的根目录下">先确认编译器的位置，我这里是MinGW-w64，位于C盘的根目录下↓</h2>
-<figure data-type="image" tabindex="6"><img src="https://RogerChen2005.github.io/post-images/1616908396802.png" alt="" loading="lazy"></figure>
-<h2 id="-右键此电脑点击属性">-&gt;右键此电脑，点击属性</h2>
-<figure data-type="image" tabindex="7"><img src="https://RogerChen2005.github.io/post-images/1616908479549.png" alt="" loading="lazy"></figure>
-<h2 id="-选择高级系统设置">-&gt;选择“高级系统设置”</h2>
-<figure data-type="image" tabindex="8"><img src="https://RogerChen2005.github.io/post-images/1616908505830.png" alt="" loading="lazy"></figure>
-<h2 id="-编辑系统变量注意是系统里的path不要编辑用户里的path选择编译器文件夹中的bin文件夹">-&gt;编辑系统变量，注意是系统里的Path，不要编辑用户里的Path,选择编译器文件夹中的bin文件夹</h2>
-<figure data-type="image" tabindex="9"><img src="https://RogerChen2005.github.io/post-images/1616908710288.jpg" alt="" loading="lazy"></figure>
-<h2 id="-重启vscode在代码编辑窗口右键选择生成和调试活动文件在弹出的窗口中此时应该可见刚刚安装的编译器了-f5也可以">-&gt;重启VSCode，在代码编辑窗口右键选择“生成和调试活动文件”，在弹出的窗口中此时应该可见刚刚安装的编译器了。（F5也可以）</h2>
-<h2 id="解释g是编译c的gcc是用来编译c的gdb是用来调试的">解释：g++是编译C++的，gcc是用来编译C的，gdb是用来调试的。</h2>
-<figure data-type="image" tabindex="10"><img src="https://RogerChen2005.github.io/post-images/1616908966039.png" alt="" loading="lazy"></figure>
-<h2 id="运行结果在下面的终端里面可以直接把它当成cmd来用">运行结果在下面的终端里面（可以直接把它当成CMD来用）。</h2>
-<figure data-type="image" tabindex="11"><img src="https://RogerChen2005.github.io/post-images/1616909066161.png" alt="" loading="lazy"></figure>
-<h2 id="要调试时选中一行按f9就会新增一个断点再按f5就好了限于篇幅以后细">要调试时，选中一行按F9就会新增一个断点，再按F5就好了（限于篇幅，以后细🔒）</h2>
-<figure data-type="image" tabindex="12"><img src="https://RogerChen2005.github.io/post-images/1616910631285.png" alt="" loading="lazy"></figure>
+<p>首先，我们要先新建一个文件夹，名字取什么都行，我就直接叫Code了。<br>
+<img src="https://RogerChen2005.github.io/post-images/1616905299840.png" alt="" loading="lazy"><br>
+我们在VScode中打开这个文件夹，正常情况下下面的那条会变成蓝色。<br>
+<img src="https://RogerChen2005.github.io/post-images/1616905380520.jpg" alt="" loading="lazy"><br>
+资源管理器里也会出现我们刚刚打开的文件夹，我们新建一个文件，后缀名是*cpp这样VSCode就会知道我们要写的是C++了。<br>
+<img src="https://RogerChen2005.github.io/post-images/1616906514796.png" alt="" loading="lazy"><br>
+如果没有识别的话（<s>一般不会</s>）那可以按下图操作。<br>
+<img src="https://RogerChen2005.github.io/post-images/1616906679341.jpg" alt="" loading="lazy"><br>
+众所周知，<s>VSCode只是一个代码编辑器</s>，所以我们需要自己安装编译器，这里推荐两个：<br>
+MinGW-w64: <a href = "http://www.mingw-w64.org/doku.php">http://www.mingw-w64.org/doku.php</a><br>
+TDM-GCC: <a href = "https://jmeubank.github.io/tdm-gcc/">https://jmeubank.github.io/tdm-gcc/</a><br>
+要我说吧，其实没多大区别，最多就是编译完的exe的大小:<br>
+<img src="https://RogerChen2005.github.io/post-images/1616908269937.png" alt="" loading="lazy"></p>
+<p>如果你得到的只是一个文件夹，那你还需要进行以下操作：<br>
+先确认编译器的位置，我这里是MinGW-w64，位于C盘的根目录下↓<br>
+<img src="https://RogerChen2005.github.io/post-images/1616908396802.png" alt="" loading="lazy"><br>
+-&gt;右键此电脑，点击属性<br>
+<img src="https://RogerChen2005.github.io/post-images/1616908479549.png" alt="" loading="lazy"><br>
+-&gt;选择“高级系统设置”<br>
+<img src="https://RogerChen2005.github.io/post-images/1616908505830.png" alt="" loading="lazy"><br>
+-&gt;编辑系统变量，注意是系统里的Path，不要编辑用户里的Path,选择编译器文件夹中的bin文件夹<br>
+<img src="https://RogerChen2005.github.io/post-images/1616908710288.jpg" alt="" loading="lazy"><br>
+-&gt;重启VSCode，在代码编辑窗口右键选择“生成和调试活动文件”，在弹出的窗口中此时应该可见刚刚安装的编译器了。（F5也可以）<br>
+解释：g++是编译C++的，gcc是用来编译C的，gdb是用来调试的。<br>
+<img src="https://RogerChen2005.github.io/post-images/1616908966039.png" alt="" loading="lazy"><br>
+运行结果在下面的终端里面（可以直接把它当成CMD来用）。<br>
+<img src="https://RogerChen2005.github.io/post-images/1616909066161.png" alt="" loading="lazy"><br>
+要调试时，选中一行按F9就会新增一个断点，再按F5就好了（限于篇幅，以后细🔒）<br>
+<img src="https://RogerChen2005.github.io/post-images/1616910631285.png" alt="" loading="lazy"></p>
 <h1 id="3-界面优化">3、界面优化</h1>
-<h2 id="界面缩放比不适应怎么办快捷键ctrl-是放大ctrl-是缩小">界面缩放比不适应怎么办？快捷键Ctrl + &quot;+&quot;是放大，Ctrl + “-”是缩小。</h2>
-<h2 id="放大后界面">放大后界面↓</h2>
-<figure data-type="image" tabindex="13"><img src="https://RogerChen2005.github.io/post-images/1616909195770.png" alt="" loading="lazy"></figure>
-<h2 id="编辑器的字体则需要去设置里面调">编辑器的字体则需要去设置里面调↓</h2>
-<figure data-type="image" tabindex="14"><img src="https://RogerChen2005.github.io/post-images/1616909262679.png" alt="" loading="lazy"></figure>
-<h2 id="喜欢浅色建议去拓展商店里面下一个atom-one-light-theme个人觉得比vscode自带的浅色主题好看">喜欢浅色建议去拓展商店里面下一个Atom One Light Theme个人觉得比VSCode自带的浅色主题好看。</h2>
-<figure data-type="image" tabindex="15"><img src="https://RogerChen2005.github.io/post-images/1616910138954.png" alt="" loading="lazy"></figure>
+<p>界面缩放比不适应怎么办？快捷键Ctrl + &quot;+&quot;是放大，Ctrl + “-”是缩小。<br>
+放大后界面↓<br>
+<img src="https://RogerChen2005.github.io/post-images/1616909195770.png" alt="" loading="lazy"><br>
+编辑器的字体则需要去设置里面调↓<br>
+<img src="https://RogerChen2005.github.io/post-images/1616909262679.png" alt="" loading="lazy"><br>
+喜欢浅色建议去拓展商店里面下一个Atom One Light Theme个人觉得比VSCode自带的浅色主题好看。<br>
+<img src="https://RogerChen2005.github.io/post-images/1616910138954.png" alt="" loading="lazy"></p>
 <p>END</p>
 ]]></content>
     </entry>
