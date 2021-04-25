@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://RogerChen2005.github.io</id>
     <title>RogerChen233</title>
-    <updated>2021-03-28T05:58:49.029Z</updated>
+    <updated>2021-04-25T04:27:17.238Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://RogerChen2005.github.io"/>
     <link rel="self" href="https://RogerChen2005.github.io/atom.xml"/>
@@ -10,6 +10,16 @@
     <logo>https://RogerChen2005.github.io/images/avatar.png</logo>
     <icon>https://RogerChen2005.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, RogerChen233</rights>
+    <entry>
+        <title type="html"><![CDATA[答案之书]]></title>
+        <id>https://RogerChen2005.github.io/post/da-an-zhi-shu/</id>
+        <link href="https://RogerChen2005.github.io/post/da-an-zhi-shu/">
+        </link>
+        <updated>2021-04-25T04:24:36.000Z</updated>
+        <content type="html"><![CDATA[<p>网址<a href = "http://rogerchen2005.github.io/bookofanswer">http://rogerchen2005.github.io/bookofanswer</a><br>
+有助于解决选择困难症。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[从零开始的VSCode教学]]></title>
         <id>https://RogerChen2005.github.io/post/cong-ling-kai-shi-de-vscode-jiao-xue/</id>
