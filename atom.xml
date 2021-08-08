@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://RogerChen2005.github.io</id>
     <title>RogerChen233</title>
-    <updated>2021-08-08T08:38:09.354Z</updated>
+    <updated>2021-08-08T08:41:03.509Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://RogerChen2005.github.io"/>
     <link rel="self" href="https://RogerChen2005.github.io/atom.xml"/>
@@ -11,13 +11,18 @@
     <icon>https://RogerChen2005.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, RogerChen233</rights>
     <entry>
-        <title type="html"><![CDATA[答案之书]]></title>
+        <title type="html"><![CDATA[Rooger's toolbox]]></title>
         <id>https://RogerChen2005.github.io/post/da-an-zhi-shu/</id>
         <link href="https://RogerChen2005.github.io/post/da-an-zhi-shu/">
         </link>
         <updated>2021-04-25T04:24:36.000Z</updated>
-        <content type="html"><![CDATA[<p>网址<a href = "http://rogerchen2005.github.io/bookofanswer">http://rogerchen2005.github.io/bookofanswer</a><br>
-有助于解决选择困难症。</p>
+        <content type="html"><![CDATA[<p>#现已收录：<br>
+##答案之书<br>
+网址<a href = "https://rogerchen2005.github.io/toolbox/tools/bookofanswer">https://rogerchen2005.github.io/toolbox/tools/bookofanswer</a><br>
+有助于解决选择困难症。<br>
+##每日一签<br>
+网址<a href = "https://rogerchen2005.github.io/toolbox/tools/everydaylots">https://rogerchen2005.github.io/toolbox/tools/everydaylots</a><br>
+测一测你的今日运势？</p>
 ]]></content>
     </entry>
     <entry>
