@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://RogerChen2005.github.io</id>
     <title>RogerChen233</title>
-    <updated>2021-08-20T14:33:54.214Z</updated>
+    <updated>2021-08-20T14:36:37.445Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://RogerChen2005.github.io"/>
     <link rel="self" href="https://RogerChen2005.github.io/atom.xml"/>
@@ -16,9 +16,9 @@
         <link href="https://RogerChen2005.github.io/post/new-programs-uploaded/">
         </link>
         <updated>2021-08-20T14:03:38.000Z</updated>
-        <content type="html"><![CDATA[<p>New program write by me.<br>
-Use to compare two programs and find out the differents between them.<br>
-新开发的对拍器，可以比较两个程序的区别然后找出区别</p>
+        <content type="html"><![CDATA[<p>A new program writen by me.<br>
+Can compare two files and find out the differents between them.<br>
+新开发的对拍器，可以比较两个文件然后找出区别</p>
 <p>GUI↓<br>
 <img src="https://RogerChen2005.github.io/post-images/1629468507319.png" alt="" loading="lazy"></p>
 <p>Code:<br>
