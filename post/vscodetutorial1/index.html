@@ -170,7 +170,7 @@
                     <article class="post-wrap">
                         <header class="post-header">
                             <h1 class="post-title">
-                                关于
+                                从零开始的VSCode教学
                             </h1>
                             
                                     <!--zh-->
@@ -179,12 +179,18 @@
                                         <a itemprop="author" rel="author" href="/">
                                             RogerChen233
                                         </a>
-                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2019-01-25 19:01:00</a></span>
+                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2021-03-28 10:03:00</a></span>
                                         <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a
-                                    href="#">0.1
+                                    href="#">2.8
                                     &#x5206;&#x949F;</a></span>
-                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">34</a></span>
+                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">776</a></span>
                                         
+                                            <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://RogerChen2005.github.io/tag/EoL1jajTn/">软件</a>
+                                
+                            </span>
+                                            
                                                 阅读量:
                                                 <span data-hk-page="current"> - </span>
                                                 
@@ -192,30 +198,78 @@
                                     
                         </header>
                         <div class="post-content">
-                            <blockquote>
-<p>欢迎来到本站！</p>
-</blockquote>
-<h2 id="关于本站">🏠 关于本站</h2>
-<h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<p>👨‍🎓一名普通中学生。</p>
-<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
-<p>🎮Gaming！<br>
-🎧Music~</p>
-<h2 id="联系我呀">📬 联系我呀</h2>
-<p>RogerChen200506@163.com</p>
+                            <p>本蒟蒻最近从Dev-C++切换到了VSCode,发现VSCode是真的好用，感触甚深，是故发此文记之。</p>
+<h1>!!!!!!多图警告</h1>
+<br/>
+<h1 id="1-下载与安装">1、下载与安装</h1>
+<p>下载地址：<a href = "https://code.visualstudio.com/">https://code.visualstudio.com/</a><br>
+↓红圈圈起来的点一下就是（<s>真就傻瓜式教学😅</s>）<br>
+<img src="https://RogerChen2005.github.io/post-images/1616897887704.png" alt="" loading="lazy"><br>
+下载完成后，我们得到了这样一个文件↓<br>
+<img src="https://RogerChen2005.github.io/post-images/1616898184474.png" alt="" loading="lazy"><br>
+<s>没错，这就是VSCode的安装包！！！😁</s><br>
+按照默认的来选就好了，不用乱改。<br>
+<img src="https://RogerChen2005.github.io/post-images/1616898239074.png" alt="" loading="lazy"><br>
+这就是VScode的界面↓<br>
+<img src="https://RogerChen2005.github.io/post-images/1616898393018.png" alt="" loading="lazy"><br>
+这是有人就要问了：“诶，你说这界面怎么是英文的？🤔”<br>
+别急，VSCode有自带的插件商店，里面就有中文的插件。<br>
+<img src="https://RogerChen2005.github.io/post-images/1616898499394.jpg" alt="" loading="lazy"><br>
+安装重启之后，界面就变成中文了↓<br>
+<img src="https://RogerChen2005.github.io/post-images/1616898565577.png" alt="" loading="lazy"><br>
+要想搭建一个舒适的Coding环境，没有插件是不行滴，所以，我们再次打开插件商店，搜索C++,第一个就是↓<br>
+<img src="https://RogerChen2005.github.io/post-images/1616904911908.png" alt="" loading="lazy"><br>
+如果嫌一个一个装麻烦，Microsoft还贴心地为各位提供了一次性安装完的整合包。<br>
+<img src="https://RogerChen2005.github.io/post-images/1616904976661.png" alt="" loading="lazy"><br>
+对了，记得勾上自动保存，不然老是Ctrl + s保存很烦↓<br>
+<img src="https://RogerChen2005.github.io/post-images/1616910338169.png" alt="" loading="lazy"></p>
+<h1 id="2-编译器环境配置">2、编译器环境配置</h1>
+<p>首先，我们要先新建一个文件夹，名字取什么都行，我就直接叫Code了。<br>
+<img src="https://RogerChen2005.github.io/post-images/1616905299840.png" alt="" loading="lazy"><br>
+我们在VScode中打开这个文件夹，正常情况下下面的那条会变成蓝色。<br>
+<img src="https://RogerChen2005.github.io/post-images/1616905380520.jpg" alt="" loading="lazy"><br>
+资源管理器里也会出现我们刚刚打开的文件夹，我们新建一个文件，后缀名是*cpp这样VSCode就会知道我们要写的是C++了。<br>
+<img src="https://RogerChen2005.github.io/post-images/1616906514796.png" alt="" loading="lazy"><br>
+如果没有识别的话（<s>一般不会</s>）那可以按下图操作。<br>
+<img src="https://RogerChen2005.github.io/post-images/1616906679341.jpg" alt="" loading="lazy"><br>
+众所周知，<s>VSCode只是一个代码编辑器</s>，所以我们需要自己安装编译器，这里推荐两个：<br>
+MinGW-w64: <a href = "http://www.mingw-w64.org/doku.php">http://www.mingw-w64.org/doku.php</a><br>
+TDM-GCC: <a href = "https://jmeubank.github.io/tdm-gcc/">https://jmeubank.github.io/tdm-gcc/</a><br>
+要我说吧，其实没多大区别，最多就是编译完的exe的大小:<br>
+<img src="https://RogerChen2005.github.io/post-images/1616908269937.png" alt="" loading="lazy"></p>
+<p>如果你得到的只是一个文件夹，那你还需要进行以下操作：<br>
+先确认编译器的位置，我这里是MinGW-w64，位于C盘的根目录下↓<br>
+<img src="https://RogerChen2005.github.io/post-images/1616908396802.png" alt="" loading="lazy"><br>
+-&gt;右键此电脑，点击属性<br>
+<img src="https://RogerChen2005.github.io/post-images/1616908479549.png" alt="" loading="lazy"><br>
+-&gt;选择“高级系统设置”<br>
+<img src="https://RogerChen2005.github.io/post-images/1616908505830.png" alt="" loading="lazy"><br>
+-&gt;编辑系统变量，注意是系统里的Path，不要编辑用户里的Path,选择编译器文件夹中的bin文件夹<br>
+<img src="https://RogerChen2005.github.io/post-images/1616908710288.jpg" alt="" loading="lazy"><br>
+-&gt;重启VSCode，在代码编辑窗口右键选择“生成和调试活动文件”，在弹出的窗口中此时应该可见刚刚安装的编译器了。（F5也可以）<br>
+解释：g++是编译C++的，gcc是用来编译C的，gdb是用来调试的。<br>
+<img src="https://RogerChen2005.github.io/post-images/1616908966039.png" alt="" loading="lazy"><br>
+运行结果在下面的终端里面（可以直接把它当成CMD来用）。<br>
+<img src="https://RogerChen2005.github.io/post-images/1616909066161.png" alt="" loading="lazy"><br>
+要调试时，选中一行按F9就会新增一个断点，再按F5就好了（限于篇幅，以后细🔒）<br>
+<img src="https://RogerChen2005.github.io/post-images/1616910631285.png" alt="" loading="lazy"></p>
+<h1 id="3-界面优化">3、界面优化</h1>
+<p>界面缩放比不适应怎么办？快捷键Ctrl + &quot;+&quot;是放大，Ctrl + “-”是缩小。<br>
+放大后界面↓<br>
+<img src="https://RogerChen2005.github.io/post-images/1616909195770.png" alt="" loading="lazy"><br>
+编辑器的字体则需要去设置里面调↓<br>
+<img src="https://RogerChen2005.github.io/post-images/1616909262679.png" alt="" loading="lazy"><br>
+喜欢浅色建议去拓展商店里面下一个Atom One Light Theme个人觉得比VSCode自带的浅色主题好看。<br>
+<img src="https://RogerChen2005.github.io/post-images/1616910138954.png" alt="" loading="lazy"></p>
+<p>END</p>
 
                         </div>
                         
                             <div class="post-toc">
                                 <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99">🏠 关于本站</a></li>
-<li><a href="#%E5%8D%9A%E4%B8%BB%E6%98%AF%E8%B0%81">👨‍💻 博主是谁</a></li>
-<li><a href="#%E5%85%B4%E8%B6%A3%E7%88%B1%E5%A5%BD">⛹ 兴趣爱好</a></li>
-<li><a href="#%E8%81%94%E7%B3%BB%E6%88%91%E5%91%80">📬 联系我呀</a></li>
-</ul>
-</li>
+<li><a href="#1-%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85">1、下载与安装</a></li>
+<li><a href="#2-%E7%BC%96%E8%AF%91%E5%99%A8%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE">2、编译器环境配置</a></li>
+<li><a href="#3-%E7%95%8C%E9%9D%A2%E4%BC%98%E5%8C%96">3、界面优化</a></li>
 </ul>
 
                             </div>
@@ -231,7 +285,7 @@
 
                                                 <p class="copyright-item">
                                                     <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
-                                                    <span><a href="https://RogerChen2005.github.io/post/about/">https://RogerChen2005.github.io/post/about/</a></span>
+                                                    <span><a href="https://RogerChen2005.github.io/post/vscodetutorial1/">https://RogerChen2005.github.io/post/vscodetutorial1/</a></span>
                                                 </p>
 
                                                 <p class="copyright-item">
@@ -246,9 +300,9 @@
                                                                     <span style="margin-right:15px">
                         <i class="post-share"></i>
                         <span>&#x5206;&#x4EAB;:</span>
-                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://RogerChen2005.github.io/post/about/"><i class="fa fa-qrcode"></i></a>
-                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://RogerChen2005.github.io/post/about/&sharesource=qzone&title=关于&pics=https://RogerChen2005.github.io/images/avatar.png?v=1629468596976&summary="><i class="fa fa-qq"></i></a>
-                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://RogerChen2005.github.io/post/about/&sharesource=weibo&title=关于 + " - " + &pic="https://RogerChen2005.github.io/images/avatar.png?v=1629468596976 "><i class="fa fa-weibo "></i></a>
+                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://RogerChen2005.github.io/post/vscodetutorial1/"><i class="fa fa-qrcode"></i></a>
+                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://RogerChen2005.github.io/post/vscodetutorial1/&sharesource=qzone&title=从零开始的VSCode教学&pics=https://RogerChen2005.github.io/images/avatar.png?v=1629468596976&summary="><i class="fa fa-qq"></i></a>
+                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://RogerChen2005.github.io/post/vscodetutorial1/&sharesource=weibo&title=从零开始的VSCode教学 + " - " + &pic="https://RogerChen2005.github.io/images/avatar.png?v=1629468596976 "><i class="fa fa-weibo "></i></a>
 
                                                                     </span>
                                                                     
@@ -258,6 +312,12 @@
                                                                                     <span>&#x6807;&#x7B7E;:</span>
                                                                                     <span class="tag ">
                         
+                        
+                        <a href="https://RogerChen2005.github.io/tag/EoL1jajTn/">#
+                    软件
+                        </a>
+                        
+                            
                                 </span>
                                                                                 </div>
                                                                                 <div>
@@ -272,7 +332,15 @@
                                                                                 <!---->
                                                                                 <section class="post-nav">
                                                                                     
+                                                                                        <a class="prev" rel="prev" href="https://RogerChen2005.github.io/post/roogerstoolbox/">
+                                                                                            Rooger&#39;s toolbox
+                                                                                        </a>
+                                                                                        
                                                                                             
+                                                                                                <a class="next" rel="next" href="https://RogerChen2005.github.io/post/rainbow6review/">
+                                                                                                    《彩虹六号：围攻》评测
+                                                                                                </a>
+                                                                                                
                                                                                 </section>
                     </article>
                 </div>
