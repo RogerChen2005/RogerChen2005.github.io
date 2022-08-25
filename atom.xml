@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://RogerChen2005.github.io</id>
     <title>RogerChen233</title>
-    <updated>2022-02-07T08:58:32.972Z</updated>
+    <updated>2022-08-25T01:56:20.443Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://RogerChen2005.github.io"/>
     <link rel="self" href="https://RogerChen2005.github.io/atom.xml"/>
@@ -10,6 +10,97 @@
     <logo>https://RogerChen2005.github.io/images/avatar.png</logo>
     <icon>https://RogerChen2005.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, RogerChen233</rights>
+    <entry>
+        <title type="html"><![CDATA[记一次离谱的Debug经历]]></title>
+        <id>https://RogerChen2005.github.io/post/ji-yi-ci-chi-pu-de-debug-jing-li/</id>
+        <link href="https://RogerChen2005.github.io/post/ji-yi-ci-chi-pu-de-debug-jing-li/">
+        </link>
+        <updated>2022-08-25T01:52:35.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="发现问题">发现问题</h3>
+<p>不知从何时,我的网易云一直在启动后崩溃</p>
+<p>今天心血来潮，决定一探究竟</p>
+<p>注意到，启动之后，本地音乐旁边的圈圈一直在转</p>
+<p>打开任务管理器，发现网易云在十秒钟之内吃了3.4个G内存，最后吃到3.8个G的时候崩溃了</p>
+<p><img src="https://RogerChen2005.github.io/post-images/1661392423967.png" alt="任务管理器yyds" loading="lazy"><br>
+<em>P1 任务管理器yyds</em></p>
+<p>我立刻注意到，网易云是32位应用,内存极限是4G，于是可以判断是内存泄露的问题</p>
+<h3 id="内存是怎么泄露的">内存是怎么泄露的？</h3>
+<p>打开VS进行调试，与刚刚的情况相同，内存吃满后报错</p>
+<p><img src="https://RogerChen2005.github.io/post-images/1661392430751.png" alt="报错" loading="lazy"><br>
+<em>P2 报错</em></p>
+<p>查看输出，发现一堆的std::bad_alloc，这个时候学过C的都应该知道是程序malloc的内存不够导致的，而报错的，正是网易云ID3模块，看来是文件读取错误无疑了</p>
+<p><img src="https://RogerChen2005.github.io/post-images/1661392435335.png" alt="内存泄漏" loading="lazy"><br>
+<em>P3 内存泄漏</em></p>
+<h3 id="神秘的测试文件">神秘的测试文件</h3>
+<p>向上继续翻，发现了关键信息，所有的报错都指向了同一个文件夹 taglib-1.12/test/data</p>
+<p><img src="https://RogerChen2005.github.io/post-images/1661392439580.png" alt="目标锁定" loading="lazy"><br>
+<em>P4 目标锁定</em></p>
+<p>这个文件夹是我最近在写taglib的项目时从SourceForge上下的taglib源码，而test里面存放的都是taglib的测试文件（debug用），data里面的歌曲都是些为了故意为难程序而放的</p>
+<p>随后，我尝试了删除文件夹，果然，文件夹正在被占用，到此为止已经真相大白了，网易云读taglib的测试文件发生错误，于是一直while循环读取发生错误的文件，导致内存迅速吃满，触碰到32位程序4G的极限之后崩溃</p>
+<p><img src="https://RogerChen2005.github.io/post-images/1661392444085.png" alt="文件夹被占用" loading="lazy"><br>
+<em>P5 文件夹被占用</em></p>
+<h3 id="后记">后记</h3>
+<p>大公司的屎山代码实在可怕</p>
+<p>各位写C/C++的时候一定要做好内存管理，不然可以和我一样转投Node,Python,C#等有垃圾回收器的语言（doge）</p>
+<p>幸亏网易云是32位的，不然会直接吃满我的内存直接把系统都卡死（长叹一口气）</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ Lyric Finder]]></title>
+        <id>https://RogerChen2005.github.io/post/lyric-finder/</id>
+        <link href="https://RogerChen2005.github.io/post/lyric-finder/">
+        </link>
+        <updated>2022-08-25T01:48:02.000Z</updated>
+        <content type="html"><![CDATA[<p>Lyric Finder已经正式发布并可从GitHub下载</p>
+<p><a href="https://github.com/RogerChen2005/LyricFinder/releases">下载链接</a></p>
+<figure data-type="image" tabindex="1"><img src="https://RogerChen2005.github.io/post-images/1661392332841.png" alt="" loading="lazy"></figure>
+<h2 id="update-近期更新">Update 近期更新</h2>
+<h3 id="825-101-build-22802">8.25 1.01 build 22802</h3>
+<p>1、修复若干Bug</p>
+<p>Fixed several bugs</p>
+<p>2、新增匹配歌词功能</p>
+<p>New function:match lyrics to local files</p>
+<p>3、新增匹配封面功能</p>
+<p>New function:match covers to local files</p>
+<h3 id="824-101-build-22801">8.24 1.01 build 22801</h3>
+<p>1、下载歌曲将自动写入歌曲元数据</p>
+<p>Metadata will automatically apply to downloaded songs.</p>
+<p>2、新增下载进度</p>
+<p>Add download progress.</p>
+<p>3、优化批量操作</p>
+<p>Better bulk operations.</p>
+<h2 id="overview-总览">Overview 总览</h2>
+<p>此软件免费并开源</p>
+<p>This is a free and open-source software by <a href="https://rogerchen2005.github.io">castle</a>.</p>
+<h2 id="functions-功能">Functions 功能</h2>
+<p>1、<strong>从网易音乐下载歌曲，封面，歌词</strong></p>
+<p><strong>Download songs,covers,lyrics from NCM (Main Function)</strong></p>
+<p>2、登陆并查看个人歌单</p>
+<p>Login and view personal songlist</p>
+<p>3、搜索并添加歌曲进入下载列表</p>
+<p>search and add songs to download list</p>
+<h2 id="usage-使用">Usage 使用</h2>
+<p>1、准备网易云Api的副本，修改main.js中的Api路径</p>
+<p>Prepare a copy of NeteaseCloudMusicApi and then change the path in main.js</p>
+<pre><code class="language-JavaScript">require(&quot;./path/to/api/server&quot;).serveNcmApi({
+    checkVersion: true,
+})
+</code></pre>
+<p>2、npm安装依赖</p>
+<p>Install modules through npm</p>
+<pre><code class="language-Bash">npm install
+</code></pre>
+<p>3、启动项目</p>
+<pre><code class="language-bash">electron .
+</code></pre>
+<h2 id="based-on-基于">Based on 基于</h2>
+<p>1、<a href="https://www.electronjs.org/">Electron</a></p>
+<p>2、<a href="https://vuejs.org/">Vue</a></p>
+<p>3、<a href="https://element.eleme.io/#/zh-CN">Element-UI</a></p>
+<p>4、<a href="https://github.com/Binaryify/NeteaseCloudMusicApi">NeteaseCloudMusicApi</a></p>
+<p>5、<a href="https://github.com/benrr101/node-taglib-sharp">Node-Taglib-Sharp</a></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[New Programs Uploaded]]></title>
         <id>https://RogerChen2005.github.io/post/new-programs-uploaded/</id>

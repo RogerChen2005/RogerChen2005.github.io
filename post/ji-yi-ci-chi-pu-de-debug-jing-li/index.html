@@ -170,7 +170,7 @@
                     <article class="post-wrap">
                         <header class="post-header">
                             <h1 class="post-title">
-                                Hello Gridea
+                                记一次离谱的Debug经历
                             </h1>
                             
                                     <!--zh-->
@@ -179,18 +179,12 @@
                                         <a itemprop="author" rel="author" href="/">
                                             RogerChen233
                                         </a>
-                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2018-12-12 00:12:00</a></span>
+                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2022-08-25 09:08:00</a></span>
                                         <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a
-                                    href="#">1.0
+                                    href="#">1.8
                                     &#x5206;&#x949F;</a></span>
-                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">298</a></span>
+                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">511</a></span>
                                         
-                                            <span class="post-category">&#x5206;&#x7C7B;:
-                                
-                                <a href="https://RogerChen2005.github.io/tag/OATrGeR5l/">Gridea</a>
-                                
-                            </span>
-                                            
                                                 阅读量:
                                                 <span data-hk-page="current"> - </span>
                                                 
@@ -198,27 +192,33 @@
                                     
                         </header>
                         <div class="post-content">
-                            <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+                            <h3 id="发现问题">发现问题</h3>
+<p>不知从何时,我的网易云一直在启动后崩溃</p>
+<p>今天心血来潮，决定一探究竟</p>
+<p>注意到，启动之后，本地音乐旁边的圈圈一直在转</p>
+<p>打开任务管理器，发现网易云在十秒钟之内吃了3.4个G内存，最后吃到3.8个G的时候崩溃了</p>
+<p><img src="https://RogerChen2005.github.io/post-images/1661392423967.png" alt="任务管理器yyds" loading="lazy"><br>
+<em>P1 任务管理器yyds</em></p>
+<p>我立刻注意到，网易云是32位应用,内存极限是4G，于是可以判断是内存泄露的问题</p>
+<h3 id="内存是怎么泄露的">内存是怎么泄露的？</h3>
+<p>打开VS进行调试，与刚刚的情况相同，内存吃满后报错</p>
+<p><img src="https://RogerChen2005.github.io/post-images/1661392430751.png" alt="报错" loading="lazy"><br>
+<em>P2 报错</em></p>
+<p>查看输出，发现一堆的std::bad_alloc，这个时候学过C的都应该知道是程序malloc的内存不够导致的，而报错的，正是网易云ID3模块，看来是文件读取错误无疑了</p>
+<p><img src="https://RogerChen2005.github.io/post-images/1661392435335.png" alt="内存泄漏" loading="lazy"><br>
+<em>P3 内存泄漏</em></p>
+<h3 id="神秘的测试文件">神秘的测试文件</h3>
+<p>向上继续翻，发现了关键信息，所有的报错都指向了同一个文件夹 taglib-1.12/test/data</p>
+<p><img src="https://RogerChen2005.github.io/post-images/1661392439580.png" alt="目标锁定" loading="lazy"><br>
+<em>P4 目标锁定</em></p>
+<p>这个文件夹是我最近在写taglib的项目时从SourceForge上下的taglib源码，而test里面存放的都是taglib的测试文件（debug用），data里面的歌曲都是些为了故意为难程序而放的</p>
+<p>随后，我尝试了删除文件夹，果然，文件夹正在被占用，到此为止已经真相大白了，网易云读taglib的测试文件发生错误，于是一直while循环读取发生错误的文件，导致内存迅速吃满，触碰到32位程序4G的极限之后崩溃</p>
+<p><img src="https://RogerChen2005.github.io/post-images/1661392444085.png" alt="文件夹被占用" loading="lazy"><br>
+<em>P5 文件夹被占用</em></p>
+<h3 id="后记">后记</h3>
+<p>大公司的屎山代码实在可怕</p>
+<p>各位写C/C++的时候一定要做好内存管理，不然可以和我一样转投Node,Python,C#等有垃圾回收器的语言（doge）</p>
+<p>幸亏网易云是32位的，不然会直接吃满我的内存直接把系统都卡死（长叹一口气）</p>
 
                         </div>
                         
@@ -226,7 +226,14 @@
                                 <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E7%89%B9%E6%80%A7">特性👇</a></li>
+<li>
+<ul>
+<li><a href="#%E5%8F%91%E7%8E%B0%E9%97%AE%E9%A2%98">发现问题</a></li>
+<li><a href="#%E5%86%85%E5%AD%98%E6%98%AF%E6%80%8E%E4%B9%88%E6%B3%84%E9%9C%B2%E7%9A%84">内存是怎么泄露的？</a></li>
+<li><a href="#%E7%A5%9E%E7%A7%98%E7%9A%84%E6%B5%8B%E8%AF%95%E6%96%87%E4%BB%B6">神秘的测试文件</a></li>
+<li><a href="#%E5%90%8E%E8%AE%B0">后记</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -244,7 +251,7 @@
 
                                                 <p class="copyright-item">
                                                     <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
-                                                    <span><a href="https://RogerChen2005.github.io/post/hello-gridea/">https://RogerChen2005.github.io/post/hello-gridea/</a></span>
+                                                    <span><a href="https://RogerChen2005.github.io/post/ji-yi-ci-chi-pu-de-debug-jing-li/">https://RogerChen2005.github.io/post/ji-yi-ci-chi-pu-de-debug-jing-li/</a></span>
                                                 </p>
 
                                                 <p class="copyright-item">
@@ -259,13 +266,9 @@
                                                                     <span style="margin-right:15px">
                         <i class="post-share"></i>
                         <span>&#x5206;&#x4EAB;:</span>
-                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://RogerChen2005.github.io/post/hello-gridea/"><i class="fa fa-qrcode"></i></a>
-                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://RogerChen2005.github.io/post/hello-gridea/&sharesource=qzone&title=Hello Gridea&pics=https://RogerChen2005.github.io/images/avatar.png?v=1661392551780&summary=&lt;p&gt;👏  欢迎使用 &lt;strong&gt;Gridea&lt;/strong&gt; ！&lt;br&gt;
-✍️  &lt;strong&gt;Gridea&lt;/strong&gt; 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...&lt;/p&gt;
-"><i class="fa fa-qq"></i></a>
-                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://RogerChen2005.github.io/post/hello-gridea/&sharesource=weibo&title=Hello Gridea + " - " + &lt;p&gt;👏  欢迎使用 &lt;strong&gt;Gridea&lt;/strong&gt; ！&lt;br&gt;
-✍️  &lt;strong&gt;Gridea&lt;/strong&gt; 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...&lt;/p&gt;
-&pic="https://RogerChen2005.github.io/images/avatar.png?v=1661392551780 "><i class="fa fa-weibo "></i></a>
+                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://RogerChen2005.github.io/post/ji-yi-ci-chi-pu-de-debug-jing-li/"><i class="fa fa-qrcode"></i></a>
+                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://RogerChen2005.github.io/post/ji-yi-ci-chi-pu-de-debug-jing-li/&sharesource=qzone&title=记一次离谱的Debug经历&pics=https://RogerChen2005.github.io/images/avatar.png?v=1661392551780&summary="><i class="fa fa-qq"></i></a>
+                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://RogerChen2005.github.io/post/ji-yi-ci-chi-pu-de-debug-jing-li/&sharesource=weibo&title=记一次离谱的Debug经历 + " - " + &pic="https://RogerChen2005.github.io/images/avatar.png?v=1661392551780 "><i class="fa fa-weibo "></i></a>
 
                                                                     </span>
                                                                     
@@ -275,12 +278,6 @@
                                                                                     <span>&#x6807;&#x7B7E;:</span>
                                                                                     <span class="tag ">
                         
-                        
-                        <a href="https://RogerChen2005.github.io/tag/OATrGeR5l/">#
-                    Gridea
-                        </a>
-                        
-                            
                                 </span>
                                                                                 </div>
                                                                                 <div>
@@ -296,6 +293,10 @@
                                                                                 <section class="post-nav">
                                                                                     
                                                                                             
+                                                                                                <a class="next" rel="next" href="https://RogerChen2005.github.io/post/lyric-finder/">
+                                                                                                     Lyric Finder
+                                                                                                </a>
+                                                                                                
                                                                                 </section>
                     </article>
                 </div>
